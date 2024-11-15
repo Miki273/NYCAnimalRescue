@@ -6,11 +6,11 @@ execute:
   echo: true
 
 book:
-  title: "YOUR PROJECT TITLE"
+  title: "NYC Urban Park Ranger Animal Condition Report"
   author:
-    - AUTHOR1 (UNI1)
-    - AUTHOR2 (UNI2)
-  repo-url: https://github.com/YOUR_GITHUB_ACCOUNT/REPO_NAME
+    - Zian Xu (zx2514)
+    - Mengxi Liu (ml5189)
+  repo-url: https://github.com/Miki273/NYCAnimalRescue
   date: today
   page-footer:
     right: |
