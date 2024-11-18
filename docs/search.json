@@ -44,7 +44,7 @@
     "href": "data.html",
     "title": "2  Data",
     "section": "",
-    "text": "2.1 Description",
+    "text": "2.1 Technical Description\nFor the proposed project, we plan to utilize a dataset called Urban Park Ranger Animal Condition Response available at NYC OpenData. This dataset is recorded during animal condition response incidents handled by park rangers and collected by Urban Park Rangers of New York City Parks Department. It is published and maintained by NYC OpenData and is updated every 6 months for analysis.\nThe dataset comprises 6,385 rows and 22 columns. For our project, we have chosen the CSV format of the dataset. Other formats of the data such as RDF, XML, and RSS are also available on the source website. Notably, the data includes requests for animal assistance, relocation, and rescue completed by the Urban Park Rangers. Requests are typically made by other Parks staff, park visitors making requests in person, and by calls to 311. Each record represents a single request.\nHowever, a potential issue regarding the dataset is the presence of numerous “unfounded” final responses, meaning that the incident reported could not be verified upon the ranger’s arrival. This can introduce problems when it comes to analyzing related variables, such as animal condition and number of animals involved.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
     ]

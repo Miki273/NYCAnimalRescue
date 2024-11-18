@@ -1,5 +1,15 @@
 # Data
 
-## Description
+## Technical Description
+For the proposed project, we plan to utilize a dataset called Urban Park Ranger Animal Condition Response available at [NYC OpenData](https://data.cityofnewyork.us/Environment/Urban-Park-Ranger-Animal-Condition-Response/fuhs-xmg2/about_data). This dataset is recorded during animal condition response incidents handled by park rangers and collected by Urban Park Rangers of the New York City Parks Department. It is published and maintained by NYC OpenData and is updated every 6 months for analysis.
+
+The dataset comprises 6,385 rows and 22 columns. For our project, we have chosen the CSV format of the dataset. Other formats of the data, such as RDF, XML, and RSS, are also available on the source website. Notably, the data includes requests for animal assistance, relocation, and rescue completed by the Urban Park Rangers. Requests are typically made by other Parks staff, park visitors making requests in person, and by calls to 311. Each record represents a single request.
+
+However, a potential issue regarding the dataset is the presence of numerous "unfounded" final responses, meaning that the incident reported could not be verified upon the ranger's arrival. This can introduce problems when analyzing related variables, such as animal condition and number of animals involved. 
+
+```{r, echo=FALSE}
+# data<-read.csv("data/Urban_Park_Ranger_Animal_Condition_Response_20241115.csv",header = TRUE, sep=",",na.strings=c("","N/A"))
+# t(head(data,1))
+```
 
 ## Missing value analysis

@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description"><span class="header-section-number">2.1</span> Description</a></li>
+  <li><a href="#technical-description" id="toc-technical-description" class="nav-link active" data-scroll-target="#technical-description"><span class="header-section-number">2.1</span> Technical Description</a></li>
   <li><a href="#missing-value-analysis" id="toc-missing-value-analysis" class="nav-link" data-scroll-target="#missing-value-analysis"><span class="header-section-number">2.2</span> Missing value analysis</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Miki273/NYCAnimalRescue/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Miki273/NYCAnimalRescue/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -176,8 +176,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="description" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="description"><span class="header-section-number">2.1</span> Description</h2>
+<section id="technical-description" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="technical-description"><span class="header-section-number">2.1</span> Technical Description</h2>
+<p>For the proposed project, we plan to utilize a dataset called Urban Park Ranger Animal Condition Response available at <a href="https://data.cityofnewyork.us/Environment/Urban-Park-Ranger-Animal-Condition-Response/fuhs-xmg2/about_data">NYC OpenData</a>. This dataset is recorded during animal condition response incidents handled by park rangers and collected by Urban Park Rangers of New York City Parks Department. It is published and maintained by NYC OpenData and is updated every 6 months for analysis.</p>
+<p>The dataset comprises 6,385 rows and 22 columns. For our project, we have chosen the CSV format of the dataset. Other formats of the data such as RDF, XML, and RSS are also available on the source website. Notably, the data includes requests for animal assistance, relocation, and rescue completed by the Urban Park Rangers. Requests are typically made by other Parks staff, park visitors making requests in person, and by calls to 311. Each record represents a single request.</p>
+<p>However, a potential issue regarding the dataset is the presence of numerous “unfounded” final responses, meaning that the incident reported could not be verified upon the ranger’s arrival. This can introduce problems when it comes to analyzing related variables, such as animal condition and number of animals involved.</p>
 </section>
 <section id="missing-value-analysis" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="missing-value-analysis"><span class="header-section-number">2.2</span> Missing value analysis</h2>
