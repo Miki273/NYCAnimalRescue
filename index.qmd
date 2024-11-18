@@ -1,25 +1,3 @@
 # Introduction
 
-## Context for Readers
-In urban environments, where human activities dominate the landscape, animals often face unique challenges that require intervention. Habitat loss, vehicle collisions, and exposure to pollutants or human structures can leave animals injured, displaced, or in distress. Thus, urban wildlife rescue and relocation have become essential in ensuring the welfare of animals while maintaining public safety. In particular, NYC Urban park ranger program plays a major role in helping us coexist with our wild neighbors. Rangers are on call to attend to injured wildlife and are there to help people learn more about how to keep them wild and how to safely view the wildest residents.
-
-## Motivation
-We choose this topic because analyzing and visualizing patterns in urban wildlife incidents allows us to uncover valuable insights into how animals interact with urban environments. Understanding these patterns—such as the most common species involved, seasonal trends, or the distribution of incidents across different areas—can reveal the underlying dynamics of urban ecosystems. This topic is important because it highlights the challenges and opportunities in managing human-wildlife interactions, providing a clearer picture of how urbanization impacts biodiversity. By analyzing these patterns, we can better understand the needs of urban wildlife and how cities like New York can adapt to foster sustainable coexistence with their wild neighbors. This can further help improve urban planning, public awareness, and conservation strategies, ensuring cities remain livable for both humans and wildlife.
-
-## Research Questions
-In this study, we aim to analyze the dataset containing wildlife incidents and ranger responses to understand how various factors influence patterns of animal rescue and assistance. The questions we aim to investigate are as follow:
-
-1. Trends in Animal Assistance Requests: Are there any seasonal or monthly patterns in the data?
-
-2. Geographic Distribution: Which areas report the most incidents?
-
-3. Types of Incidents and Animals Involved: What are the most common types of assistance or rescues requested? Which animals are most frequently involved?
-
-4. Response Times and Efficiency: Does response time vary by type of incident or location?
-
-5. Impact of External Factor: How do urban development correlate with incident patterns?
-
-
-
-
-
+In urban environments, where human activities dominate the landscape, animals often face unique challenges that require intervention. Habitat loss, vehicle collisions, and exposure to pollutants or human structures can leave animals injured, displaced, or in distress. Thus, urban wildlife rescue and relocation have become essential for ensuring the welfare of animals while maintaining public safety, especially in big cities. Therefore, we decided to use exploratory data analysis to study patterns in urban wildlife incidents from the NYC Urban Park Ranger Program. Questions we are interested in include the most common species involved, seasonal trends, the spatial distribution of incidents, as well as the connection between these factors and animal assistance requests and responses. This can help us gain crucial insights about optimizing resource allocation, improving response time, and better anticipating areas or situations that require focused attention. With this information, cities like New York can adapt to promote sustainable coexistence with wildlife, improve urban planning, enhance public awareness, and develop effective conservation strategies.
