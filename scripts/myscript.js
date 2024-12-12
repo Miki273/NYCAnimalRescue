@@ -41,9 +41,9 @@ d3.csv("https://raw.githubusercontent.com/Miki273/NYCAnimalRescue/main/d3plot_da
           .attr("d", line);
           
         svg.append("rect")
-            .attr("width", width) // Full width of the graph area
-            .attr("height", height) // Full height of the graph area
-            .attr("fill", "transparent") // Invisible rectangle
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill", "transparent")
             .attr("pointer-events", "all")
             .on("click", function(event) {
             const [xPos, yPos] = d3.pointer(event);
