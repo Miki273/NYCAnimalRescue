@@ -4,9 +4,30 @@
   * {
     font-family: sans-serif;
   }
+  
+  .line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2;
+  }
+  .axis-label {
+    font-size: 12px;
+  }
 </style> 
 
 <div id="plot">
+
+<h2>Explore Number of Animals Involved in the Incidents</h2>
+<p>
+  <input type="radio" name="animalClass" value="Birds" checked="true">Birds
+	<input type="radio" name="animalClass" value="Small Mammals">Small Mammals
+	<input type="radio" name="animalClass" value="Terrestrial Reptile or Amphibian">Terrestrial Reptile or Amphibian
+	<input type="radio" name="animalClass" value="Domestic">Domestic Animals
+	<input type="radio" name="animalClass" value="Raptors">Raptors
+</p>
+
+<button id="check" class="button" style="display: none;">Check the real line</button>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
