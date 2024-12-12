@@ -59,14 +59,6 @@ d3.csv("https://raw.githubusercontent.com/Miki273/NYCAnimalRescue/main/d3plot_da
               return; // Ignore this click
             }
             
-            if (lastPoint && clickedDate <= lastPoint.date) {
-                console.log("Adjusting point: Clicked date is before or same as the previous point.");
-                clickedDate = new Date(lastPoint.date.getFullYear(), lastPoint.date.getMonth() + 1); // Move to the next month
-                console.log("Adjusted date:", clickedDate);
-            }
-
-            // Add the clicked point to userLineData
-            const newPoint = { date: clickedDate, count: clickedCount };
             if (!lastPoint) {
                 // Set lastPoint to the last point of the original line on the first click
                 lastPoint = {
@@ -74,6 +66,16 @@ d3.csv("https://raw.githubusercontent.com/Miki273/NYCAnimalRescue/main/d3plot_da
                     count: lastOriginalPoint.count
                 };
             }
+            
+            clickedDate = new Date(clickedDate.getFullYear(), clickedDate.getMonth(), 1);
+            if (clickedDate <= lastPoint.date) {
+                console.log("Adjusting point: Clicked date is before or same as the previous point.");
+                clickedDate = new Date(lastPoint.date.getFullYear(), lastPoint.date.getMonth() + 1); // Move to the next month
+                console.log("Adjusted date:", clickedDate);
+            } 
+
+            // Add the clicked point to userLineData
+            const newPoint = { date: clickedDate, count: clickedCount };
             
             userLineData.push(lastPoint, newPoint);
             
@@ -87,6 +89,7 @@ d3.csv("https://raw.githubusercontent.com/Miki273/NYCAnimalRescue/main/d3plot_da
                     .y(d => y(d.count)));
 
             lastPoint = newPoint;
+            console.log("lastpoint:", lastPoint.date);
 
             // Show the "Check" button
             d3.select("#check").style("display", "block");
