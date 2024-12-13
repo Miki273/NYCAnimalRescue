@@ -17,7 +17,22 @@
 
 <div id="plot">
 
-<h2>Explore Number of Animals Involved in the Incidents</h2>
+<h2>Make Your Move: Predict the Incident Call Trends!</h2>
+<p style="font-size: 1.5em;"><b>How to Play:</b></p >
+
+<p>
+<b>1. Choose an Animal Class.</b>
+Select one of the five animal classes most frequently involved in incidents.
+
+<b>2. Make Your Predictions.</b>
+Use the timeline to create a prediction line by clicking on the time series plot. You can only move forward in time with your clicks!
+
+<b>3. Check Your Answers.</b>
+When you're done, hit the 'Check the real line' button to see if you got it right!
+
+<b>Hint:</b> Refer to the two previous figures in the Time Section of Part 3 to guide your predictions.
+</p>
+
 <p>
   <input type="radio" name="animalClass" value="Birds" checked="true">Birds
 	<input type="radio" name="animalClass" value="Small Mammals">Small Mammals

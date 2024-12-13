@@ -52,15 +52,15 @@ d3.csv("https://raw.githubusercontent.com/Miki273/NYCAnimalRescue/main/d3plot_da
             const clickedCount = y.invert(yPos);
             if (clickedDate <= firstValidDate) {
                 console.log("Invalid click: Click must be after", firstValidDate);
-                return; // Ignore this click
+                return;
             }
             if (clickedDate > lastValidDate) {
               console.log("Invalid click: Click must be before or on", lastValidDate);
-              return; // Ignore this click
+              return; 
             }
             
             if (!lastPoint) {
-                // Set lastPoint to the last point of the original line on the first click
+                
                 lastPoint = {
                     date: new Date(lastOriginalPoint.year, lastOriginalPoint.month - 1),
                     count: lastOriginalPoint.count
@@ -70,11 +70,11 @@ d3.csv("https://raw.githubusercontent.com/Miki273/NYCAnimalRescue/main/d3plot_da
             clickedDate = new Date(clickedDate.getFullYear(), clickedDate.getMonth(), 1);
             if (clickedDate <= lastPoint.date) {
                 console.log("Adjusting point: Clicked date is before or same as the previous point.");
-                clickedDate = new Date(lastPoint.date.getFullYear(), lastPoint.date.getMonth() + 1); // Move to the next month
+                clickedDate = new Date(lastPoint.date.getFullYear(), lastPoint.date.getMonth() + 1);
                 console.log("Adjusted date:", clickedDate);
             } 
 
-            // Add the clicked point to userLineData
+
             const newPoint = { date: clickedDate, count: clickedCount };
             
             userLineData.push(lastPoint, newPoint);
@@ -91,12 +91,11 @@ d3.csv("https://raw.githubusercontent.com/Miki273/NYCAnimalRescue/main/d3plot_da
             lastPoint = newPoint;
             console.log("lastpoint:", lastPoint.date);
 
-            // Show the "Check" button
+        
             d3.select("#check").style("display", "block");
         });
         
         d3.select("#check").on("click", function() {
-            // Draw the real line (2023-2024)
             svg.append("path")
                 .datum(hiddenLineData)
                 .attr("fill", "none")
@@ -104,22 +103,21 @@ d3.csv("https://raw.githubusercontent.com/Miki273/NYCAnimalRescue/main/d3plot_da
                 .attr("stroke-width", 2)
                 .attr("d", line);
 
-            // Hide the button after showing the real line
             d3.select(this).style("display", "none");
         });
     }
     
     updateGraph("Birds");
     d3.selectAll("input[name='animalClass']").on("change", function() {
-        userLineData = []; // Reset user-drawn lines
-        lastPoint = null;  // Reset lastPoint
-        svg.selectAll("path:not(.line)").remove(); // Remove user-drawn lines
-        d3.select("#check").style("display", "none"); // Hide "Check" button
+        userLineData = []; 
+        lastPoint = null;  
+        svg.selectAll("path:not(.line)").remove(); 
+        d3.select("#check").style("display", "none"); 
         updateGraph(this.value);
     });
 });
 
-const margin = {top: 20, right: 30, bottom: 40, left: 50};
+const margin = {top: 20, right: 30, bottom: 80, left: 50};
 const width = 800 - margin.left - margin.right;
 const height = 500 - margin.top - margin.bottom;
 
@@ -137,6 +135,24 @@ const xAxis = svg.append("g")
               .attr("transform", `translate(0,${height})`);
 
 const yAxis = svg.append("g");
+
+// X-axis label
+svg.append("text")
+  .attr("class", "x-axis-label")
+  .attr("text-anchor", "middle")
+  .attr("x", width / 2)
+  .attr("y", height + margin.bottom-15) 
+  .text("Time");
+
+
+svg.append("text")
+  .attr("class", "y-axis-label")
+  .attr("text-anchor", "middle")
+  .attr("transform", `rotate(-90)`) 
+  .attr("x", -height / 2) 
+  .attr("y", -margin.left + 15) 
+  .text("Number of Incident Calls");
+
 
 const line = d3.line()
              .x(d => x(new Date(d.year, d.month - 1)))

@@ -144,8 +144,31 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#patterns-by-borough-and-location" id="toc-patterns-by-borough-and-location" class="nav-link active" data-scroll-target="#patterns-by-borough-and-location"><span class="header-section-number">3.1</span> Patterns by Borough and Location</a>
+  <ul class="collapse">
+  <li><a href="#number-of-animal-rescue-requests-of-parks" id="toc-number-of-animal-rescue-requests-of-parks" class="nav-link" data-scroll-target="#number-of-animal-rescue-requests-of-parks"><span class="header-section-number">3.1.1</span> Number of Animal Rescue Requests of Parks</a></li>
+  <li><a href="#average-response-time-by-animal-conditions" id="toc-average-response-time-by-animal-conditions" class="nav-link" data-scroll-target="#average-response-time-by-animal-conditions"><span class="header-section-number">3.1.2</span> Average Response Time by Animal Conditions</a></li>
+  <li><a href="#median-response-time-of-parks" id="toc-median-response-time-of-parks" class="nav-link" data-scroll-target="#median-response-time-of-parks"><span class="header-section-number">3.1.3</span> Median Response Time of Parks</a></li>
+  </ul></li>
+  <li><a href="#time-patterns" id="toc-time-patterns" class="nav-link" data-scroll-target="#time-patterns"><span class="header-section-number">3.2</span> Time Patterns</a>
+  <ul class="collapse">
+  <li><a href="#yearly-seasonal-patterns" id="toc-yearly-seasonal-patterns" class="nav-link" data-scroll-target="#yearly-seasonal-patterns"><span class="header-section-number">3.2.1</span> Yearly &amp; Seasonal Patterns</a></li>
+  <li><a href="#seasonal-patterns-by-animal-class" id="toc-seasonal-patterns-by-animal-class" class="nav-link" data-scroll-target="#seasonal-patterns-by-animal-class"><span class="header-section-number">3.2.2</span> Seasonal Patterns by Animal Class</a></li>
+  </ul></li>
+  <li><a href="#patterns-by-animal-class" id="toc-patterns-by-animal-class" class="nav-link" data-scroll-target="#patterns-by-animal-class"><span class="header-section-number">3.3</span> Patterns by Animal Class</a>
+  <ul class="collapse">
+  <li><a href="#frequency-of-different-types-of-animals-in-requests" id="toc-frequency-of-different-types-of-animals-in-requests" class="nav-link" data-scroll-target="#frequency-of-different-types-of-animals-in-requests"><span class="header-section-number">3.3.1</span> Frequency of Different Types of Animals in Requests</a></li>
+  <li><a href="#the-impact-of-animal-class-on-final-ranger-action" id="toc-the-impact-of-animal-class-on-final-ranger-action" class="nav-link" data-scroll-target="#the-impact-of-animal-class-on-final-ranger-action"><span class="header-section-number">3.3.2</span> The Impact of Animal Class on Final Ranger Action</a></li>
+  <li><a href="#the-impact-of-animal-class-on-response-duration" id="toc-the-impact-of-animal-class-on-response-duration" class="nav-link" data-scroll-target="#the-impact-of-animal-class-on-response-duration"><span class="header-section-number">3.3.3</span> The Impact of Animal Class on Response Duration</a></li>
+  <li><a href="#number-of-animals-per-incident-by-animal-class" id="toc-number-of-animals-per-incident-by-animal-class" class="nav-link" data-scroll-target="#number-of-animals-per-incident-by-animal-class"><span class="header-section-number">3.3.4</span> Number of Animals per Incident by Animal Class</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Miki273/NYCAnimalRescue/edit/main/results.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Miki273/NYCAnimalRescue/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -169,8 +192,189 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="patterns-by-borough-and-location" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="patterns-by-borough-and-location"><span class="header-section-number">3.1</span> Patterns by Borough and Location</h2>
+<p>In this section, our aim is to discover the spatial patterns of animal rescue requests. By grouping data with the same borough (and location), we explored the number of requests and response times. By studying these spatial trends, we can gain insights about where to focus on and what to improve for boroughs and parks.</p>
+<section id="number-of-animal-rescue-requests-of-parks" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="number-of-animal-rescue-requests-of-parks"><span class="header-section-number">3.1.1</span> Number of Animal Rescue Requests of Parks</h3>
+<p>The Cleveland dot plot below shows the number of animal rescue requests in parks with more than 10 requests in total in each borough. The boroughs are ordered by the number of such parks in them.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>From this graph, we observed that most parks have 125 or fewer animal rescue requests, but different boroughs show different patterns. Queens and Staten Island have the most parks with more than 10 requests, but most of their parks have fewer than 125 requests, and no park’s number of requests exceeds 250. Manhattan and Brooklyn have fewer parks with more than 10 requests, but each has an outlier – Central Park for Manhattan and Prospect Park for Brooklyn. Particularly, Central Park contains almost 1000 requests. The Bronx has the fewest number of parks, but the first two or three parks have relatively large numbers of requests compared with the first several parks in Queens or Staten Island.</p>
+<p>In general, the incidents in Queens and Staten Island are more evenly distributed. Given that they have the most parks, one thing we can focus on is the distribution of resources among these parks. For Manhattan and Brooklyn, except for the distribution of resources among all parks, we can develop strategies or departments dedicated to Central Park and Prospect Park. For the Bronx, with fewer parks and a high number of requests only in the first few parks, we can consider two distinct management strategies: one for the more heavily requested parks and another for the remaining parks with fewer incidents.</p>
+</section>
+<section id="average-response-time-by-animal-conditions" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="average-response-time-by-animal-conditions"><span class="header-section-number">3.1.2</span> Average Response Time by Animal Conditions</h3>
+<p>With the knowledge about the number of requests in each borough, we now analyze the average response time of incident calls (from the time of the initial call to the time of ranger responses) with different animal conditions to see if the incidents, especially those involving injured and unhealthy animals, are handled in time.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The boroughs are ordered based on the total average response time. Staten Island has the longest response time, and it shows an unusual pattern: it has the longest response time for injured animals (about 9 hours) and the second longest response time for unhealthy animals. This could result from larger, more dispersed parks in Staten Island and the more comprehensive preparation required by rescuing injured and unhealthy animals. For Manhattan, we also saw the longest average response time for injured animals and a relatively long time for unhealthy animals, which drew our attention to the causes of these lags between the initial call and ranger response for injured and unhealthy animals.</p>
+<p>Thus, we checked the median response time of parks in all five boroughs. Below is the Cleveland dot plot containing parks with a median response time higher than 10 hours.</p>
+</section>
+<section id="median-response-time-of-parks" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="median-response-time-of-parks"><span class="header-section-number">3.1.3</span> Median Response Time of Parks</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>There are two places in Staten Island – Levy Park and Jennifer’s Playground – with really long median response time, and they could be one of the contributors to the abnormally long average response time for injured animal calls. Further exploration or resource allocation can be focused on these two places to figure out ways to reduce their response time. For Manhattan, the situation is different. No park has a median response time of more than 25 hours. Thus, its relatively high average response time can only be a result of the occasional long response time of parks that usually respond in a shorter time. This can imply unusual conditions like accessibility challenges, complex cases, or traffic problems. Further efforts are required to identify the specific cause and resolve the issue effectively.</p>
+</section>
+</section>
+<section id="time-patterns" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="time-patterns"><span class="header-section-number">3.2</span> Time Patterns</h2>
+<p>In this section, we will explore the time patterns of animal rescue requests. Understanding when incidents occur most often is the key to improving how we respond to and manage these situations. By recognizing patterns in the timing of rescue requests, organizations can better prepare for busy times, make sure the right people and resources are available, and even take steps to prevent problems before they happen.</p>
+<section id="yearly-seasonal-patterns" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="yearly-seasonal-patterns"><span class="header-section-number">3.2.1</span> Yearly &amp; Seasonal Patterns</h3>
+<p>First, we take a look at how the number of rescue requests has changed from 2018 to 2024.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>From the line plot above, we can see that there are annual and monthly trends in rescue requests:</p>
+<p><strong>Yearly Trends</strong>:</p>
+<p>Between 2018 and 2019, there was a noticeable drop in rescue requests. This could be due to changes in how people report issues, public awareness levels, or environmental factors. However, after 2019, the number of calls slowly increased, suggesting that more incidents are being reported or that interactions between people and animals are becoming more common.</p>
+<p><strong>Seasonal Trends</strong>:</p>
+<p>A clear pattern emerges with more calls during summer, especially from June to August. This likely relates to more outdoor activities when people are more likely to encounter animals, or it could reflect natural animal behaviors such as breeding or migration. These seasonal peaks suggest that summer is a critical time for incident management.</p>
+</section>
+<section id="seasonal-patterns-by-animal-class" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="seasonal-patterns-by-animal-class"><span class="header-section-number">3.2.2</span> Seasonal Patterns by Animal Class</h3>
+<p>To gain a better understanding of seasonal patterns, we break them down according to the type of animal involved.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the plot above, we look at the six animal classes that generate the most rescue requests:</p>
+<p><strong>Birds</strong>:</p>
+<p>Rescue requests involving birds rise sharply in July, likely because this is when young birds leave their nests for the first time. During this time, they are more vulnerable and often end up in urban areas where they encounter humans.</p>
+<p><strong>Small Mammals, Terrestrial Reptiles and Amphibians, Raptors</strong>:</p>
+<p>Like Birds, animals in those classes exhibit their distinct seasonal peak in rescue requests. Terrestrial reptiles and amphibians see a rise in requests in June, likely linked to their active season of migration and breeding. Small mammals experience a surge in calls in April, August, and October, tied to their breeding cycles, feeding, and food-storing activities. Raptors experience increased incidents in March and April, during their breeding season when young birds are more vulnerable. While the peaks may vary in size and timing, all these groups demonstrate how seasonal changes influence human-animal interactions, emphasizing the need for targeted response strategies throughout the year.</p>
+<p><strong>Domestic Animals</strong>:</p>
+<p>Unlike wild animals, domestic animals have a consistent pattern of incidents throughout the year. This steadiness reflects the controlled environments they live in and the constant care they receive from humans.</p>
+</section>
+</section>
+<section id="patterns-by-animal-class" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="patterns-by-animal-class"><span class="header-section-number">3.3</span> Patterns by Animal Class</h2>
+<p>In this section, our goal is to identify trends and patterns unique to each animal class. This analysis will provide a deeper understanding of how different types of animals are involved in incidents, enabling us to find suitable responses, interventions, and strategies to address the specific needs of each class.</p>
+<section id="frequency-of-different-types-of-animals-in-requests" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="frequency-of-different-types-of-animals-in-requests"><span class="header-section-number">3.3.1</span> Frequency of Different Types of Animals in Requests</h3>
+<p>This part focuses on how frequently each animal class appears in incidents.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>From the bar plot above, we can see that birds have the highest count, exceeding 2000 incidents. Following birds, small mammals also have a lot of cases. This may be due to their higher interaction with the urban environment.</p>
+<p>Moreover, we can see that marine mammals, coyotes, fish, marine reptiles, and rare, endangered, dangerous animals have low frequencies of incidents. This may caused by their lower population density or fewer interactions with humans.</p>
+<p>Furthermore, to determine whether different areas exhibit distinct patterns in the distribution of animal incidents, we segmented the data into five regions: Manhattan, Queens, Brooklyn, Staten Island, and the Bronx. This faceted approach allows for a clear comparison of incident trends across these locations.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="1152"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Although most regions follow a similar distribution, we can detect some differences in them:</p>
+<p>While birds dominate rescue requests in most regions, there are more requests involving small mammals - Rabies Vector Species (RVS) in Manhattan. This may be caused by Manhattan’s dense urban environment, which enables higher interactions with small mammals (RVS), such as rats and raccoons, due to limited natural spaces.</p>
+<p>In Staten Island, Birds dominate incident reports by the most significant margin. This may result from larger green spaces and proximity to natural habitats at Staten Island, supporting a more significant bird population and leading to a higher proportion of bird-related incidents.</p>
+</section>
+<section id="the-impact-of-animal-class-on-final-ranger-action" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="the-impact-of-animal-class-on-final-ranger-action"><span class="header-section-number">3.3.2</span> The Impact of Animal Class on Final Ranger Action</h3>
+<p>In this part, we explore the final actions taken by rangers across different animal classes. The animals are ordered by the number of times they appear in an incident (the same order as the distribution of animal types above). This provides meaningful insights into how ranger response strategies vary, helping us understand the species-specific intervention patterns.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="1152"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Comparison between related or similar species tells us about the differences in needs and management strategies for those animal classes.</p>
+<p>Comparing birds with raptors, we found that there’s no obvious priority action for birds, but the action “rehabilitator” dominates for raptors. Birds as a broader category may include many species with diverse issues—ranging from minor public interactions to simple relocations—resulting in a more evenly distributed set of actions. In contrast, raptors are often species with protected status, larger size, or specialized care requirements, leading to a heavier reliance on rehabilitators. This suggests that while general bird-related responses require adaptable strategies, raptors demand more targeted, resource-intensive interventions.</p>
+<p>The difference in final actions between rabies vector species and other small mammals can be attributed to their risks and management protocols. “Small Mammals-RVS” (Rabies Vector Species) are high-risk carriers of diseases like rabies, leading to a higher proportion being sent to ACC (Animal Care Centers) for public safety and disease control. In contrast, “Small Mammals-non RVS” have fewer health risks, allowing for a greater focus on relocation or minor interventions to correct specific issues.</p>
+<p>Besides comparison, the analysis of the main types of actions taken for each animal type is worth noticing since it reflects the nature of the animals and the challenges they present. For rabies vector species and domestic animals, ACC (capture and containment) is commonly used due to the need to address potential threats to public health or to manage more immediate risks associated with these animals. Marine mammals, on the other hand, often require monitoring because of the complexities involved in intervening with species that are typically in their natural aquatic habitats, making direct action more difficult.</p>
+</section>
+<section id="the-impact-of-animal-class-on-response-duration" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="the-impact-of-animal-class-on-response-duration"><span class="header-section-number">3.3.3</span> The Impact of Animal Class on Response Duration</h3>
+<p>In this part, we will explore the effect of animal classes on the duration of response, which reflects the amount of time spent addressing each incident.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>These boxplots show that marine mammals require the longest response duration, likely due to the complexity of their cases, which involve detailed observation, coordination, and specialized care. Marine reptiles also have relatively long response durations, reflecting similar challenges. In contrast, classes such as birds, domestic animals, and coyotes have shorter response durations, suggesting their cases are typically simpler and can be resolved more quickly.</p>
+<p>However, it is also possible that the extended response duration for marine mammals is influenced by their final actions. To explore this, we analyzed the response durations associated with different final actions to determine whether the variations in response time are driven by the type of action taken.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This plot highlights that rehabilitation-related actions, such as “Rehabilitator” and “Released back into Park after Rehabilitation,” take the longest time, as these processes involve prolonged care and recovery. In contrast, actions like “Advised/Educated Others” have the shortest durations, as they require minimal intervention. Moderate response times are observed for actions such as “Relocated/Condition Corrected” and “Submitted for DEC Testing,” which involve some effort but are less intensive than rehabilitation.</p>
+<p>However, combining insights from both plots, we see that while marine mammals have the longest response durations, their most common final action, “monitored animals,” does not inherently require extensive time. This suggests that the long response durations for marine mammals are primarily due to the complexity and challenges involved in their rescue and handling processes rather than the nature of the final action itself.</p>
+</section>
+<section id="number-of-animals-per-incident-by-animal-class" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="number-of-animals-per-incident-by-animal-class"><span class="header-section-number">3.3.4</span> Number of Animals per Incident by Animal Class</h3>
+<p>Since the number of animals involved in each incident varies, we want to explore whether certain animal classes are more likely to be involved in group incidents.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="results_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The histograms reveal that most incidents across all animal classes involve a single animal, particularly deer, coyotes, marine mammals, and marine reptiles. This may be attributed to these species being predominantly solitary in nature.</p>
+<p>However, certain animal classes, such as fish, domestic animals, and rare, endangered or dangerous species, occasionally exhibit instances involving larger groups of more than twenty animals. While this may partly be due to the randomness associated with smaller incident numbers, it also reflects unique behavioral or situational factors. For example, many fish species live in large groups and exhibit schooling behavior, domestic animals tend to travel in groups due to how they are kept, and habitat loss may cause rare, endangered or dangerous species to congregate.</p>
+<p>For other animal classes, including birds, raptors, small mammals, terrestrial reptiles or amphibians, group incidents are less common but still occur occasionally with more than two animals. Many of these include social animals, but living in a smaller group than animals above, like fish.</p>
+<p>This analysis helps us identify patterns in how animals are involved in incidents, enabling us to categorize them into distinct groups and develop more effective rescue strategies based on that.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -613,7 +817,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/Miki273/NYCAnimalRescue/edit/main/results.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Miki273/NYCAnimalRescue/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Miki273/NYCAnimalRescue/edit/main/results.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Miki273/NYCAnimalRescue/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
