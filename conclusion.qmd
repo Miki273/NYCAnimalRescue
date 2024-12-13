@@ -1,1 +1,9 @@
 # Conclusion
+
+By applying various exploratory data analysis and visualization techniques to the Urban Park Ranger Animal Condition Response dataset, we gained valuable insights across several key areas:
+
+1. **Boroughs and locations**: Central Park and Prospect Park have much more requests than other parks. Most boroughs show relatively long response time for injured animals, especially Staten Island.
+2. **Time**: We observe that the majority of rescue requests occur during the summer, with distinct time patterns emerging for each animal class. These patterns are related to activities including feeding and breeding and animals’ interactions with people.
+3. **Animal classes**: Different animal classes influence both the duration of response, the choice of final ranger action and the number involved in each incident. Each class presents unique challenges that necessitate tailored strategies for effective handling and intervention.
+
+Our study is primarily limited by the dataset itself, which lacks some key details essential to addressing our research questions. For example, in one problem where we aim to identify more potential causes for the variation in the distribution of animal classes involved in rescue requests, but the total number of animals in each class is unknown. For future work, we plan to expand the geographical scope beyond New York City to include more diverse regions and conduct more comprehensive statistical analyses to derive scientifically rigorous conclusions. Through this project, we learned how to formulate insightful questions from raw data, handle missing and incomplete data, perform time series analysis, and create interactive data visualizations using D3. Additionally, we gained experience in developing an interactive HTML-based report, which helped present our findings in a more engaging and accessible format.
