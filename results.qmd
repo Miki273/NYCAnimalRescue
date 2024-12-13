@@ -300,7 +300,7 @@ ggplot(df_duration, aes(x = `Duration of Response`,y=`Animal Class`)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))+
   labs(x = "Duration of Response", 
        y = "Animal Class", 
-       title = "Duration of Response by Animal Classes")
+       title = "Duration of Response by Animal Class")
 
 
 ```
